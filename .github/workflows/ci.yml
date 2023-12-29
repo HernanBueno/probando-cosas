@@ -11,14 +11,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
-    - name: Login Dockerhub
-      env:
-        DOCKER_USERNAME: ${{env.DOCKER_USERNAME}}
-        DOCKER_PASSWORD: ${{env.DOCKER_PASSWORD}}
-      run: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
-      
+    - uses: actions/checkout@v3     
     - name: Build the Docker image
       run: docker build -t HernanBueno/probando-cosas .
-    - name: Push to Dockerhub
-      run: docker push HernanBueno/probando-cosas:latest
