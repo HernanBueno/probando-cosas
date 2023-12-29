@@ -19,6 +19,6 @@ jobs:
       run: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
       
     - name: Build the Docker image
-      run: docker build -t hernanbueno/probando-cosas .
+      run: docker build -t hernygood/probando-cosas .
     - name: Push to Dockerhub
-      run: docker push hernanbueno/probando-cosas:latest
+      run: docker push hernygood/probando-cosas:latest
